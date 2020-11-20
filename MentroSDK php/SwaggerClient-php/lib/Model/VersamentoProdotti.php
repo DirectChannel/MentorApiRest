@@ -1,6 +1,6 @@
 <?php
 /**
- * DefaultTable
+ * VersamentoProdotti
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * DefaultTable Class Doc Comment
+ * VersamentoProdotti Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DefaultTable implements ModelInterface, ArrayAccess
+class VersamentoProdotti implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class DefaultTable implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'DefaultTable';
+    protected static $swaggerModelName = 'VersamentoProdotti';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'codice' => 'string',
-        'descrizione' => 'string'
+        'codice_prodotto' => 'string',
+        'quantita' => 'int',
+        'prezzo_unitario' => 'float',
+        'totale' => 'float'
     ];
 
     /**
@@ -67,8 +69,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'codice' => null,
-        'descrizione' => null
+        'codice_prodotto' => null,
+        'quantita' => 'int32',
+        'prezzo_unitario' => 'float',
+        'totale' => 'float'
     ];
 
     /**
@@ -98,8 +102,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'codice' => 'Codice',
-        'descrizione' => 'Descrizione'
+        'codice_prodotto' => 'CodiceProdotto',
+        'quantita' => 'Quantita',
+        'prezzo_unitario' => 'PrezzoUnitario',
+        'totale' => 'Totale'
     ];
 
     /**
@@ -108,8 +114,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'codice' => 'setCodice',
-        'descrizione' => 'setDescrizione'
+        'codice_prodotto' => 'setCodiceProdotto',
+        'quantita' => 'setQuantita',
+        'prezzo_unitario' => 'setPrezzoUnitario',
+        'totale' => 'setTotale'
     ];
 
     /**
@@ -118,8 +126,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'codice' => 'getCodice',
-        'descrizione' => 'getDescrizione'
+        'codice_prodotto' => 'getCodiceProdotto',
+        'quantita' => 'getQuantita',
+        'prezzo_unitario' => 'getPrezzoUnitario',
+        'totale' => 'getTotale'
     ];
 
     /**
@@ -182,8 +192,10 @@ class DefaultTable implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['codice'] = isset($data['codice']) ? $data['codice'] : null;
-        $this->container['descrizione'] = isset($data['descrizione']) ? $data['descrizione'] : null;
+        $this->container['codice_prodotto'] = isset($data['codice_prodotto']) ? $data['codice_prodotto'] : null;
+        $this->container['quantita'] = isset($data['quantita']) ? $data['quantita'] : null;
+        $this->container['prezzo_unitario'] = isset($data['prezzo_unitario']) ? $data['prezzo_unitario'] : null;
+        $this->container['totale'] = isset($data['totale']) ? $data['totale'] : null;
     }
 
     /**
@@ -211,49 +223,97 @@ class DefaultTable implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets codice
+     * Gets codice_prodotto
      *
      * @return string
      */
-    public function getCodice()
+    public function getCodiceProdotto()
     {
-        return $this->container['codice'];
+        return $this->container['codice_prodotto'];
     }
 
     /**
-     * Sets codice
+     * Sets codice_prodotto
      *
-     * @param string $codice codice
+     * @param string $codice_prodotto codice_prodotto
      *
      * @return $this
      */
-    public function setCodice($codice)
+    public function setCodiceProdotto($codice_prodotto)
     {
-        $this->container['codice'] = $codice;
+        $this->container['codice_prodotto'] = $codice_prodotto;
 
         return $this;
     }
 
     /**
-     * Gets descrizione
+     * Gets quantita
      *
-     * @return string
+     * @return int
      */
-    public function getDescrizione()
+    public function getQuantita()
     {
-        return $this->container['descrizione'];
+        return $this->container['quantita'];
     }
 
     /**
-     * Sets descrizione
+     * Sets quantita
      *
-     * @param string $descrizione descrizione
+     * @param int $quantita quantita
      *
      * @return $this
      */
-    public function setDescrizione($descrizione)
+    public function setQuantita($quantita)
     {
-        $this->container['descrizione'] = $descrizione;
+        $this->container['quantita'] = $quantita;
+
+        return $this;
+    }
+
+    /**
+     * Gets prezzo_unitario
+     *
+     * @return float
+     */
+    public function getPrezzoUnitario()
+    {
+        return $this->container['prezzo_unitario'];
+    }
+
+    /**
+     * Sets prezzo_unitario
+     *
+     * @param float $prezzo_unitario prezzo_unitario
+     *
+     * @return $this
+     */
+    public function setPrezzoUnitario($prezzo_unitario)
+    {
+        $this->container['prezzo_unitario'] = $prezzo_unitario;
+
+        return $this;
+    }
+
+    /**
+     * Gets totale
+     *
+     * @return float
+     */
+    public function getTotale()
+    {
+        return $this->container['totale'];
+    }
+
+    /**
+     * Sets totale
+     *
+     * @param float $totale totale
+     *
+     * @return $this
+     */
+    public function setTotale($totale)
+    {
+        $this->container['totale'] = $totale;
 
         return $this;
     }

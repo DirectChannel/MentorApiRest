@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **periodicoGet**
-> object periodicoGet($cl_codice, $id_periodico)
+> object periodicoGet($cl_codice)
 
 
 
@@ -75,10 +75,9 @@ $apiInstance = new Swagger\Client\Api\PeriodicoApi(
     new GuzzleHttp\Client()
 );
 $cl_codice = "cl_codice_example"; // string | 
-$id_periodico = "id_periodico_example"; // string | 
 
 try {
-    $result = $apiInstance->periodicoGet($cl_codice, $id_periodico);
+    $result = $apiInstance->periodicoGet($cl_codice);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PeriodicoApi->periodicoGet: ', $e->getMessage(), PHP_EOL;
@@ -91,7 +90,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cl_codice** | **string**|  |
- **id_periodico** | **string**|  | [optional]
 
 ### Return type
 

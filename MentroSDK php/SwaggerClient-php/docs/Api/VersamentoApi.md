@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **versamentoGet**
-> object versamentoGet($codice_cliente, $data_inizio, $data_fine, $id_regolare)
+> \Swagger\Client\Model\Versamento[] versamentoGet($codice_cliente, $data_inizio, $data_fine, $id_regolare)
 
 
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\Versamento[]**](../Model/Versamento.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **versamentoInsertVersamento**
-> object versamentoInsertVersamento($raw_string, $ambiente)
+> \Swagger\Client\Model\Versamento[] versamentoInsertVersamento($raw_string, $ambiente)
 
 
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\Versamento[]**](../Model/Versamento.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **versamentoUpdateAttivita**
-> object versamentoUpdateAttivita($raw_string, $ambiente)
+> \Swagger\Client\Model\Versamento[] versamentoUpdateAttivita($raw_string, $ambiente)
 
 
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\Swagger\Client\Model\Versamento[]**](../Model/Versamento.md)
 
 ### Authorization
 

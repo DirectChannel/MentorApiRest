@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **id_web** | **string** |  | [optional] 
 **codice_cliente** | **string** |  | [optional] 
 **codice_soggetto_versante** | **string** |  | [optional] 
+**codice_centro_ricavo** | **string** |  | [optional] 
 **codice_partner** | **string** |  | [optional] 
 **codice_riferimento** | **string** |  | [optional] 
 **campagna** | **object** |  | [optional] 
@@ -28,6 +29,8 @@ Name | Type | Description | Notes
 **sotto_tipo** | **object** |  | [optional] 
 **lotto** | **string** |  | [optional] 
 **escludi_attestato** | **string** |  | [optional] 
+**flag_one_off** | **bool** |  | [optional] 
+**prodotti** | [**\Swagger\Client\Model\VersamentoProdotti[]**](VersamentoProdotti.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
